@@ -1,0 +1,34 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+all_matches:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/all_matches.csv
+
+train_data:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train_data.csv
+
+test_data:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test_data.csv
+
+first_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/first_model.pkl
+  backend: pickle
+
+second_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/second_model.pkl
+  backend: pickle
+
+bat_ratings:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/bat_ratings.csv
+
+bowl_ratings:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/bowl_ratings.csv
